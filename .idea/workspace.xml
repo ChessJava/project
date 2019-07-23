@@ -209,7 +209,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="951" />
     <option name="width" value="978" />
     <option name="height" value="1039" />
@@ -369,7 +369,7 @@
       <workItem from="1563759227435" duration="8112000" />
       <workItem from="1563790604089" duration="2062000" />
       <workItem from="1563867253663" duration="4562000" />
-      <workItem from="1563871914679" duration="2071000" />
+      <workItem from="1563871914679" duration="2984000" />
     </task>
     <task id="LOCAL-00001">
       <created>1563872726454</created>
@@ -394,7 +394,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37978000" />
+    <option name="totallyTimeSpent" value="38891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="761" y="0" width="782" height="831" extended-state="0" />
@@ -419,12 +419,12 @@
       <window_info anchor="bottom" id="MyBatis Sql Log" order="8" />
       <window_info anchor="bottom" id="Spring" order="9" />
       <window_info anchor="bottom" id="Database Console" order="10" weight="0.32954547" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3352518" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3352518" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50067115" side_tool="true" weight="0.39914772" />
       <window_info anchor="bottom" id="Java Enterprise" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="16" visible="true" weight="0.3294964" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.3294964" />
       <window_info anchor="bottom" id="JRebel Executor" order="17" />
       <window_info anchor="bottom" id="JRebel Console" order="18" sideWeight="0.5013423" side_tool="true" weight="0.32954547" />
       <window_info anchor="bottom" id="Messages" order="19" />
