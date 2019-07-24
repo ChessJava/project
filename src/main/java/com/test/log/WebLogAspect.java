@@ -1,5 +1,7 @@
 package com.test.log;
 
+import TimeChange.TimeChange;
+import com.test.tools.FileIO;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -12,15 +14,21 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.util.Arrays;
 
 @Aspect
 @Component
 public class WebLogAspect {
+
     private Logger logger = LoggerFactory.getLogger(getClass());
+
+    private TimeChange tc = new TimeChange();
+
     //定义execution表达式使用
     @Pointcut("execution(public * com.test.web..*.*(..))")
     public void webLog(){}
+
     @Before("webLog()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
         // 接收到请求，记录请求内容
@@ -32,7 +40,9 @@ public class WebLogAspect {
         logger.info("IP : " + request.getRemoteAddr());
         logger.info("CLASS_METHOD : " + joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
         logger.info("ARGS : " + Arrays.toString(joinPoint.getArgs()));
+        FileIO.outRecord("Test Data","e://test/Test.txt");
     }
+
     @AfterReturning(returning = "ret", pointcut = "webLog()")
     public void doAfterReturning(Object ret) throws Throwable {
         // 处理完请求，返回内容
