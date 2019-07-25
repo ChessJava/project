@@ -1,0 +1,12 @@
+
+1.启动MQ服务器后台管理系统：
+    1.1 进入“apache-activemq-5.14.5\bin\win64”下
+    1.2 启动“activemq.bat”
+    1.3 浏览器中输入url地址：“http://localhost:8161/admin/queues.jsp”
+    1.4 账号密码：
+            username:"admin",
+            password:"admin"
+
+2.启动Java类生产者Product.java，可将消息发送到MQ服务器
+
+3.启动Java类消费者Customer.java，可接收MQ服务器发送过来的消息
