@@ -1,9 +1,10 @@
-package com.test.mq;
+package mq;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
+
 
 public class Customer {
 
