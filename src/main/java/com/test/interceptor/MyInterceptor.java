@@ -9,13 +9,10 @@ import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Chess
- */
 public class MyInterceptor implements HandlerInterceptor {
 
 	private List<String> url = new ArrayList<>();
-	
+
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {

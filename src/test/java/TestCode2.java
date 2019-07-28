@@ -7,6 +7,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class TestCode2 {
+
+    private static volatile int[] index = {0};
+
     public static void main(String[] args) {
         //LocalDate ld = LocalDate.now();
         TimeChange tc = new TimeChange();
@@ -17,21 +20,21 @@ public class TestCode2 {
         } else {
             System.out.println("Start线程池已开启！！！");
         }
-        int[] index = {0};
+        //int[] index = {0};
         tpe.execute(() -> {
             List<Integer> list = new ArrayList();
             try {
-                for(int i=0;i<10;i++) {
+                for(int i=0;i<50;i++) {
                     index[0] = i;
                     System.out.println("子线程1: "+index[0]);
                     list.add(index[0]);
                     tc.show();
-                    //Thread.sleep(1000);
-                    /*if(i == 9){
+                    Thread.sleep(1000);
+                    if(i == 49){
                         tpe.shutdown();
-                    }*/
+                    }
                 }
-            } catch (Exception e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
                 System.out.println("子线程1__list数据:");
@@ -43,17 +46,17 @@ public class TestCode2 {
         tpe.execute(()->{
             List<Integer> list = new ArrayList();
             try {
-                for(int i = 0;i < 10;i++) {
+                for(int i = 50;i < 100;i++) {
                     index[0] = i;
                     System.out.println("子线程2: "+index[0]);
                     list.add(index[0]);
                     tc.show();
-                    //Thread.sleep(1000);
-                    /*if(i == 9){
+                    Thread.sleep(1000);
+                    if(i == 99){
                         tpe.shutdown();
-                    }*/
+                    }
                 }
-            } catch (Exception e) {
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
                 System.out.println("子线程2__list数据:");
@@ -62,7 +65,7 @@ public class TestCode2 {
                 }
             }
         });
-        tpe.shutdownNow();
+        //tpe.shutdownNow();
         if(tpe.isShutdown()){
             System.out.println("End线程池已关闭！！！");
         } else {
