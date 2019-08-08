@@ -345,7 +345,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15495344" />
     <property name="project.structure.side.proportion" value="0.41282564" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="vcs.patch.path" value="E:/GitRepository" />
   </component>
   <component name="RecentsManager">
@@ -476,7 +476,7 @@
       <workItem from="1564491473836" duration="668000" />
       <workItem from="1564492292978" duration="857000" />
       <workItem from="1565162967681" duration="877000" />
-      <workItem from="1565234517272" duration="1540000" />
+      <workItem from="1565234517272" duration="1710000" />
     </task>
     <task id="LOCAL-00001">
       <created>1563872726454</created>
@@ -508,7 +508,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107340000" />
+    <option name="totallyTimeSpent" value="107510000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
